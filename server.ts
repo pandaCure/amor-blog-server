@@ -3,9 +3,15 @@ import bodyParser from "koa-bodyparser";
 import logger from "koa-logger";
 import cors from "@koa/cors";
 import jwt from "koa-jwt";
+import dotenvExpand from "dotenv-expand";
+import dotenv from "dotenv";
 import registerRouter from "./routes";
-const secret = process.env.JWT_SECRET || "jwt_secret";
 const app = new Koa();
+// 读取环境变量
+const path =
+  process.env.NODE_ENV !== "production" ? "./.env" : "../server-config/.env";
+dotenvExpand(dotenv.config({ path }));
+const secret = process.env.JWT_SECRET || "jwt_secret";
 app.use(async (ctx, next) => {
   return next().catch((err) => {
     if (401 == err.status) {

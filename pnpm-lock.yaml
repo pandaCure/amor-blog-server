@@ -12,6 +12,7 @@ specifiers:
   '@types/node': ^16.11.7
   bcrypt: ^5.0.1
   dotenv: ^10.0.0
+  dotenv-expand: ^5.1.0
   jsonwebtoken: ^8.5.1
   koa: ^2.13.4
   koa-bodyparser: ^4.3.0
@@ -36,6 +37,7 @@ dependencies:
   '@types/node': registry.npmmirror.com/@types/node/16.11.7
   bcrypt: registry.npmmirror.com/bcrypt/5.0.1
   dotenv: registry.nlark.com/dotenv/10.0.0
+  dotenv-expand: registry.nlark.com/dotenv-expand/5.1.0
   jsonwebtoken: registry.nlark.com/jsonwebtoken/8.5.1
   koa: registry.npmmirror.com/koa/2.13.4
   koa-bodyparser: registry.npmmirror.com/koa-bodyparser/4.3.0
@@ -607,6 +609,12 @@ packages:
     dependencies:
       is-obj: registry.nlark.com/is-obj/2.0.0
     dev: true
+
+  registry.nlark.com/dotenv-expand/5.1.0:
+    resolution: {integrity: sha1-P7rwIL/XlIhAcuomsel5HUWmKfA=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/dotenv-expand/download/dotenv-expand-5.1.0.tgz}
+    name: dotenv-expand
+    version: 5.1.0
+    dev: false
 
   registry.nlark.com/dotenv/10.0.0:
     resolution: {integrity: sha1-PUInuPuV+BCWzdK2ZlP7LHCFuoE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/dotenv/download/dotenv-10.0.0.tgz}

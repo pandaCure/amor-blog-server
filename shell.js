@@ -21,6 +21,9 @@ const main = async () => {
     path.join(__dirname, "dist/config/config.json")
   );
   //   执行命令
+  await exec(["pnpm", "install"].join(" "), {
+    cwd: path.join(__dirname, "dist"),
+  });
   await exec(["pm2", "restart", "--env", "production"].join(" "), {
     cwd: path.join(__dirname, "dist"),
   });

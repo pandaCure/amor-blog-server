@@ -6,10 +6,9 @@ import jwt from "koa-jwt";
 import registerRouter from "./routes";
 const secret = process.env.JWT_SECRET || "jwt_secret";
 const app = new Koa();
-
+app.use(cors());
 app.use(async (ctx, next) => {
   return next().catch((err) => {
-    console.log(err);
     if (401 == err.status) {
       ctx.status = 401;
       ctx.body = {
@@ -34,7 +33,7 @@ app.use(
     path: [/^\/public/, "/"],
   })
 );
-app.use(cors()).use(bodyParser({})).use(logger());
+app.use(bodyParser({})).use(logger());
 registerRouter(app);
 app.listen("8980", () => {
   console.log("server listening at: 8980");

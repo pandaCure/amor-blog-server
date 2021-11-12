@@ -23,6 +23,7 @@
     "@types/koa-router": "^7.4.4",
     "@types/node": "^16.11.7",
     "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
